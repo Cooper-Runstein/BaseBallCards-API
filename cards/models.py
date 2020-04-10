@@ -48,11 +48,11 @@ class Company(BaseModel):
 class Player(BaseModel):
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
-    dob = models.DateField(blank=True)
+    DOB = models.DateField(blank=True)
 
 
 class Team(BaseModel):
-    team = models.CharField(
+    name = models.CharField(
         max_length=30,
         choices=TeamOption.choices,
     )
